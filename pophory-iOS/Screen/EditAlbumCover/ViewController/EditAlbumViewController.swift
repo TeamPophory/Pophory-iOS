@@ -138,10 +138,12 @@ extension EditAlbumViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let albumCoverIndex = indexPath.row * 2
-        let albumIndexPath = IndexPath(item: albumCoverIndex, section: 0)
-        editAlbumView.albumCoverCollectionView.scrollToItem(at: albumIndexPath, at: .centeredHorizontally, animated: true)
-        self.albumCoverIndex = albumCoverIndex
+        if collectionView == editAlbumView.albumThemeCollectionView {
+            let albumCoverIndex = indexPath.row * 2
+            let albumIndexPath = IndexPath(item: albumCoverIndex, section: 0)
+            editAlbumView.albumCoverCollectionView.scrollToItem(at: albumIndexPath, at: .centeredHorizontally, animated: true)
+            self.albumCoverIndex = albumCoverIndex
+        }
     }
 }
 
