@@ -81,6 +81,8 @@
 		3B6F26152AC987920065C2C5 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6F26142AC987920065C2C5 /* GoogleMobileAds */; };
 		3B6F26182AC9DBF70065C2C5 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6F26172AC9DBF70065C2C5 /* AppTrackingTransparency.framework */; };
 		3B99B7252AE17E360012A79A /* (null) in Resources */ = {isa = PBXBuildFile; };
+		3BBBEA322BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */; };
+		3BBBEA332BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */; };
 		3BC03E902AEB902F006CF499 /* WebViewURLList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03E8F2AEB902F006CF499 /* WebViewURLList.swift */; };
 		6B05C56D2AC4277800A75C00 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05C56C2AC4277800A75C00 /* ShareViewController.swift */; };
 		6B05C5702AC4277800A75C00 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B05C56E2AC4277800A75C00 /* MainInterface.storyboard */; };
@@ -316,6 +318,7 @@
 		3B9492262AF0523D00AACAD1 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		3B9492282AF0525000AACAD1 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3B9492292AF0525000AACAD1 /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3BC03E8F2AEB902F006CF499 /* WebViewURLList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewURLList.swift; sourceTree = "<group>"; };
 		6B05C56A2AC4277800A75C00 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B05C56C2AC4277800A75C00 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -1083,6 +1086,7 @@
 		B1631EFE2A1759EA0050974F = {
 			isa = PBXGroup;
 			children = (
+				3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */,
 				3B560FC42B95EDF9009781B7 /* ci_scripts */,
 				B1631F092A1759EA0050974F /* pophory-iOS */,
 				B1631F202A1759EB0050974F /* pophory-iOSTests */,
@@ -1461,6 +1465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBBEA332BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */,
 				6B05C5702AC4277800A75C00 /* MainInterface.storyboard in Resources */,
 				6B05C5C52ACAA79D00A75C00 /* Pretendard-Bold.otf in Resources */,
 				6B05C5C82ACAA7A400A75C00 /* Pretendard-Regular.otf in Resources */,
@@ -1479,6 +1484,7 @@
 				37DCA6B52A4AC7CD00FF8F90 /* Pretendard-Regular.otf in Resources */,
 				37DCA6B42A4AC7CD00FF8F90 /* Pretendard-Medium.otf in Resources */,
 				37DCA6B32A4AC7CD00FF8F90 /* Pretendard-SemiBold.otf in Resources */,
+				3BBBEA322BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */,
 				B1631F142A1759EB0050974F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
