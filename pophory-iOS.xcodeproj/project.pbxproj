@@ -1839,7 +1839,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS.ownCloud-Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PophoryShareRelease;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PophoryShareAdHoc;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2058,7 +2058,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PophoryRelease;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PophoryAdHoc;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
