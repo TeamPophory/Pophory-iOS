@@ -38,7 +38,6 @@
 		3782F4462A52F4BF00FE3846 /* OnboardingContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782F4452A52F4BF00FE3846 /* OnboardingContentCollectionViewCell.swift */; };
 		37ABA3472A7FA08400201A39 /* AsyncMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ABA3462A7FA08400201A39 /* AsyncMoyaProvider.swift */; };
 		37D6A46D2AAA524300D25B13 /* UpdatedAccessTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6A46C2AAA524300D25B13 /* UpdatedAccessTokenDTO.swift */; };
-		37DCA6862A4A97CA00FF8F90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 37DCA6852A4A97CA00FF8F90 /* SnapKit */; };
 		37DCA69A2A4AB6C900FF8F90 /* HomeAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCA6992A4AB6C900FF8F90 /* HomeAlbumViewController.swift */; };
 		37DCA69C2A4AB6D300FF8F90 /* LeaveServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCA69B2A4AB6D300FF8F90 /* LeaveServiceViewController.swift */; };
 		37DCA69E2A4AB6DC00FF8F90 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCA69D2A4AB6DC00FF8F90 /* SettingsViewController.swift */; };
@@ -61,8 +60,6 @@
 		37E1FC7E2A68066D009AF774 /* PophoryErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1FC7D2A68066D009AF774 /* PophoryErrorViewController.swift */; };
 		37EB69E92A4BEF5400075E4E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB69E82A4BEF5400075E4E /* BaseViewController.swift */; };
 		37ED8E522A8E6F9E002D6F07 /* PostRefreshTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED8E512A8E6F9E002D6F07 /* PostRefreshTokenDTO.swift */; };
-		3B15D0E42A9627940007E330 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3B15D0E32A9627940007E330 /* Moya */; };
-		3B15D0E72A9627F40007E330 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3B15D0E62A9627F40007E330 /* Sentry */; };
 		3B218EA72B833FA0006959E3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B218EA62B833FA0006959E3 /* AuthInterceptor.swift */; };
 		3B3A09132A56A56F00C8A740 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A09122A56A56F00C8A740 /* PhotoDetailView.swift */; };
 		3B3A09152A56A6C700C8A740 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A09142A56A6C700C8A740 /* PhotoDetailViewController.swift */; };
@@ -73,17 +70,22 @@
 		3B583A622AF029BF008FFB9A /* FetchAdResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B583A612AF029BF008FFB9A /* FetchAdResponseDTO.swift */; };
 		3B583A642AF02A83008FFB9A /* AdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B583A632AF02A83008FFB9A /* AdRepository.swift */; };
 		3B583A662AF02B4D008FFB9A /* DefaultAdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B583A652AF02B4D008FFB9A /* DefaultAdRepository.swift */; };
-		3B5CDBD52A94DDDB001382C4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5CDBD42A94DDDB001382C4 /* FirebaseAnalytics */; };
-		3B5CDBD72A94DDDB001382C4 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5CDBD62A94DDDB001382C4 /* FirebaseAnalyticsSwift */; };
-		3B5CDBD92A94DDDB001382C4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5CDBD82A94DDDB001382C4 /* FirebaseCrashlytics */; };
-		3B5CDBDB2A94DDDB001382C4 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5CDBDA2A94DDDB001382C4 /* FirebaseDynamicLinks */; };
 		3B63DAC52B74DCA1004DC4E8 /* AlbumThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63DAC42B74DCA1004DC4E8 /* AlbumThemeCollectionViewCell.swift */; };
-		3B6F26152AC987920065C2C5 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6F26142AC987920065C2C5 /* GoogleMobileAds */; };
 		3B6F26182AC9DBF70065C2C5 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6F26172AC9DBF70065C2C5 /* AppTrackingTransparency.framework */; };
 		3B99B7252AE17E360012A79A /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3BBBEA322BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */; };
 		3BBBEA332BE371A4005CD7A5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBEA312BE371A4005CD7A5 /* PrivacyInfo.xcprivacy */; };
 		3BC03E902AEB902F006CF499 /* WebViewURLList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03E8F2AEB902F006CF499 /* WebViewURLList.swift */; };
+		3BD441AA2BEB4CD400DC0F3B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441A92BEB4CD400DC0F3B /* Kingfisher */; };
+		3BD441AC2BEB4CDA00DC0F3B /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441AB2BEB4CDA00DC0F3B /* GoogleMobileAds */; };
+		3BD441AE2BEB4CEE00DC0F3B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441AD2BEB4CEE00DC0F3B /* FirebaseAnalytics */; };
+		3BD441B02BEB4CFA00DC0F3B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441AF2BEB4CFA00DC0F3B /* Moya */; };
+		3BD441B22BEB4D0000DC0F3B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441B12BEB4D0000DC0F3B /* SnapKit */; };
+		3BD441B42BEB4D0900DC0F3B /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441B32BEB4D0900DC0F3B /* SkeletonView */; };
+		3BD441B62BEB4D7600DC0F3B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441B52BEB4D7600DC0F3B /* RxSwift */; };
+		3BD441B82BEB4DB200DC0F3B /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441B72BEB4DB200DC0F3B /* Sentry */; };
+		3BD441BA2BEB4DF100DC0F3B /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441B92BEB4DF100DC0F3B /* FirebaseDynamicLinks */; };
+		3BD441BC2BEB4E1300DC0F3B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3BD441BB2BEB4E1300DC0F3B /* RxCocoa */; };
 		6B05C56D2AC4277800A75C00 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05C56C2AC4277800A75C00 /* ShareViewController.swift */; };
 		6B05C5702AC4277800A75C00 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B05C56E2AC4277800A75C00 /* MainInterface.storyboard */; };
 		6B05C5742AC4277800A75C00 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6B05C56A2AC4277800A75C00 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -96,7 +98,6 @@
 		6B05C5C82ACAA7A400A75C00 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37DCA6B22A4AC7CD00FF8F90 /* Pretendard-Regular.otf */; };
 		6B05C5CD2ACAA8CF00A75C00 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB37C722A55EB7400E49B12 /* DateManager.swift */; };
 		6B05C5DB2ACAB37500A75C00 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = B1631F132A1759EB0050974F /* Assets.xcassets */; };
-		6B05C5DF2ACD262C00A75C00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B05C5DE2ACD262C00A75C00 /* SnapKit */; };
 		6B09D2282A6808DA00DF4275 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09D2272A6808DA00DF4275 /* ShareViewController.swift */; };
 		6B09D22A2A6808EA00DF4275 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09D2292A6808EA00DF4275 /* ShareView.swift */; };
 		6B29DC592A5494A000F93EC7 /* PhotoInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29DC542A5494A000F93EC7 /* PhotoInfoStackView.swift */; };
@@ -131,7 +132,6 @@
 		9127801E2A6867CA0005BBA3 /* NoNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127801D2A6867CA0005BBA3 /* NoNetworkView.swift */; };
 		912780202A68698F0005BBA3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127801F2A68698F0005BBA3 /* NetworkMonitor.swift */; };
 		9161CADC2A545EA2002B8B77 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9161CADB2A545EA2002B8B77 /* PhotoCollectionViewCell.swift */; };
-		9161CADF2A5460AA002B8B77 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9161CADE2A5460AA002B8B77 /* Kingfisher */; };
 		9161CAE12A5464F0002B8B77 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9161CAE02A5464F0002B8B77 /* UICollectionView+Extension.swift */; };
 		9161CAE32A546511002B8B77 /* ReusableView+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9161CAE22A546511002B8B77 /* ReusableView+Extesion.swift */; };
 		9161CAE62A546DCD002B8B77 /* PhotoCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9161CAE52A546DCC002B8B77 /* PhotoCollectionViewDataSource.swift */; };
@@ -172,7 +172,6 @@
 		91F3A7B42A53077F00C06D1B /* ChangeSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3A7B32A53077F00C06D1B /* ChangeSortViewController.swift */; };
 		91F3A7B72A53183800C06D1B /* ChangeSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3A7B62A53183800C06D1B /* ChangeSortView.swift */; };
 		B138A3B82A586EC3000EE81E /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138A3B72A586EC3000EE81E /* SettingsRootView.swift */; };
-		B138A3BB2A587751000EE81E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B138A3BA2A587751000EE81E /* RxCocoa */; };
 		B138A3BE2A587A15000EE81E /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138A3BD2A587A15000EE81E /* SettingsData.swift */; };
 		B138A3C02A587A76000EE81E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138A3BF2A587A76000EE81E /* SettingTableViewCell.swift */; };
 		B1631F0B2A1759EA0050974F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F0A2A1759EA0050974F /* AppDelegate.swift */; };
@@ -195,7 +194,6 @@
 		B1631F5B2A175F860050974F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F5A2A175F850050974F /* UITextField+Extension.swift */; };
 		B1631F5D2A175F9C0050974F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F5C2A175F9C0050974F /* Date+Extension.swift */; };
 		B1B7E70D2A680F5700CFE64C /* PhotoUrlResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7E70C2A680F5700CFE64C /* PhotoUrlResponseDto.swift */; };
-		B1D0297E2A5D89DD000B5B53 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = B1D0297D2A5D89DD000B5B53 /* SkeletonView */; };
 		B1D029802A5D907F000B5B53 /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0297F2A5D907F000B5B53 /* UserDefault+Extension.swift */; };
 		B1D029832A5DA7AF000B5B53 /* MyPageNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D029822A5DA7AF000B5B53 /* MyPageNetworkManager.swift */; };
 		B1F310E92A5EC91200BF989B /* PophoryWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F310E82A5EC91200BF989B /* PophoryWebViewController.swift */; };
@@ -440,7 +438,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B05C5DF2ACD262C00A75C00 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,19 +445,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD441B62BEB4D7600DC0F3B /* RxSwift in Frameworks */,
+				3BD441BA2BEB4DF100DC0F3B /* FirebaseDynamicLinks in Frameworks */,
+				3BD441AC2BEB4CDA00DC0F3B /* GoogleMobileAds in Frameworks */,
+				3BD441AA2BEB4CD400DC0F3B /* Kingfisher in Frameworks */,
+				3BD441B02BEB4CFA00DC0F3B /* Moya in Frameworks */,
+				3BD441B22BEB4D0000DC0F3B /* SnapKit in Frameworks */,
+				3BD441BC2BEB4E1300DC0F3B /* RxCocoa in Frameworks */,
+				3BD441B82BEB4DB200DC0F3B /* Sentry in Frameworks */,
+				3BD441B42BEB4D0900DC0F3B /* SkeletonView in Frameworks */,
 				3B6F26182AC9DBF70065C2C5 /* AppTrackingTransparency.framework in Frameworks */,
-				3B6F26152AC987920065C2C5 /* GoogleMobileAds in Frameworks */,
-				9161CADF2A5460AA002B8B77 /* Kingfisher in Frameworks */,
-				3B5CDBD52A94DDDB001382C4 /* FirebaseAnalytics in Frameworks */,
+				3BD441AE2BEB4CEE00DC0F3B /* FirebaseAnalytics in Frameworks */,
 				6B5EF4E62A9122D100D20E04 /* (null) in Frameworks */,
-				B138A3BB2A587751000EE81E /* RxCocoa in Frameworks */,
-				3B5CDBD72A94DDDB001382C4 /* FirebaseAnalyticsSwift in Frameworks */,
-				3B15D0E72A9627F40007E330 /* Sentry in Frameworks */,
-				3B5CDBDB2A94DDDB001382C4 /* FirebaseDynamicLinks in Frameworks */,
-				3B5CDBD92A94DDDB001382C4 /* FirebaseCrashlytics in Frameworks */,
-				37DCA6862A4A97CA00FF8F90 /* SnapKit in Frameworks */,
-				3B15D0E42A9627940007E330 /* Moya in Frameworks */,
-				B1D0297E2A5D89DD000B5B53 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1326,7 +1322,6 @@
 			);
 			name = ShareExtension;
 			packageProductDependencies = (
-				6B05C5DE2ACD262C00A75C00 /* SnapKit */,
 			);
 			productName = ShareExtension;
 			productReference = 6B05C56A2AC4277800A75C00 /* ShareExtension.appex */;
@@ -1350,17 +1345,16 @@
 			);
 			name = "pophory-iOS";
 			packageProductDependencies = (
-				37DCA6852A4A97CA00FF8F90 /* SnapKit */,
-				9161CADE2A5460AA002B8B77 /* Kingfisher */,
-				B138A3BA2A587751000EE81E /* RxCocoa */,
-				B1D0297D2A5D89DD000B5B53 /* SkeletonView */,
-				3B5CDBD42A94DDDB001382C4 /* FirebaseAnalytics */,
-				3B5CDBD62A94DDDB001382C4 /* FirebaseAnalyticsSwift */,
-				3B5CDBD82A94DDDB001382C4 /* FirebaseCrashlytics */,
-				3B5CDBDA2A94DDDB001382C4 /* FirebaseDynamicLinks */,
-				3B15D0E32A9627940007E330 /* Moya */,
-				3B15D0E62A9627F40007E330 /* Sentry */,
-				3B6F26142AC987920065C2C5 /* GoogleMobileAds */,
+				3BD441A92BEB4CD400DC0F3B /* Kingfisher */,
+				3BD441AB2BEB4CDA00DC0F3B /* GoogleMobileAds */,
+				3BD441AD2BEB4CEE00DC0F3B /* FirebaseAnalytics */,
+				3BD441AF2BEB4CFA00DC0F3B /* Moya */,
+				3BD441B12BEB4D0000DC0F3B /* SnapKit */,
+				3BD441B32BEB4D0900DC0F3B /* SkeletonView */,
+				3BD441B52BEB4D7600DC0F3B /* RxSwift */,
+				3BD441B72BEB4DB200DC0F3B /* Sentry */,
+				3BD441B92BEB4DF100DC0F3B /* FirebaseDynamicLinks */,
+				3BD441BB2BEB4E1300DC0F3B /* RxCocoa */,
 			);
 			productName = ZKFace;
 			productReference = B1631F072A1759EA0050974F /* pophory-iOS.app */;
@@ -1439,14 +1433,14 @@
 			);
 			mainGroup = B1631EFE2A1759EA0050974F;
 			packageReferences = (
-				37DCA6842A4A97CA00FF8F90 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				9161CADD2A5460AA002B8B77 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				B138A3B92A587751000EE81E /* XCRemoteSwiftPackageReference "RxSwift" */,
-				B1D0297C2A5D89DD000B5B53 /* XCRemoteSwiftPackageReference "SkeletonView" */,
-				3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3B15D0E22A9627940007E330 /* XCRemoteSwiftPackageReference "Moya" */,
-				3B15D0E52A9627F40007E330 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				3B6F26132AC987920065C2C5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				3BE3FABB2BE38D9800CF61A1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3BE3FABC2BE38DDE00CF61A1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				3BE3FABD2BE38DF000CF61A1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				3BE3FABE2BE38E1500CF61A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3BE3FABF2BE38E5000CF61A1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				3BE3FAC02BE38E8500CF61A1 /* XCRemoteSwiftPackageReference "Moya" */,
+				3BE3FAC22BE38EA400CF61A1 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				3B7CC3BE2BE38F9800CFC2C7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = B1631F082A1759EA0050974F /* Products */;
 			projectDirPath = "";
@@ -2235,132 +2229,122 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		37DCA6842A4A97CA00FF8F90 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		3B7CC3BE2BE38F9800CFC2C7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.7.1;
 			};
 		};
-		3B15D0E22A9627940007E330 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		3BE3FABB2BE38D9800CF61A1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		3BE3FABC2BE38DDE00CF61A1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+		3BE3FABD2BE38DF000CF61A1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		3BE3FABE2BE38E1500CF61A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+		3BE3FABF2BE38E5000CF61A1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.25.0;
+			};
+		};
+		3BE3FAC02BE38E8500CF61A1 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
+				minimumVersion = 15.0.3;
 			};
 		};
-		3B15D0E52A9627F40007E330 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+		3BE3FAC22BE38EA400CF61A1 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-		3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-		3B6F26132AC987920065C2C5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-		9161CADD2A5460AA002B8B77 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		B138A3B92A587751000EE81E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		B1D0297C2A5D89DD000B5B53 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.31.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		37DCA6852A4A97CA00FF8F90 /* SnapKit */ = {
+		3BD441A92BEB4CD400DC0F3B /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 37DCA6842A4A97CA00FF8F90 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		3B15D0E32A9627940007E330 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B15D0E22A9627940007E330 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		3B15D0E62A9627F40007E330 /* Sentry */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B15D0E52A9627F40007E330 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
-			productName = Sentry;
-		};
-		3B5CDBD42A94DDDB001382C4 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		3B5CDBD62A94DDDB001382C4 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		3B5CDBD82A94DDDB001382C4 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		3B5CDBDA2A94DDDB001382C4 /* FirebaseDynamicLinks */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B5CDBD32A94DDDB001382C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDynamicLinks;
-		};
-		3B6F26142AC987920065C2C5 /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B6F26132AC987920065C2C5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
-		};
-		6B05C5DE2ACD262C00A75C00 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37DCA6842A4A97CA00FF8F90 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		9161CADE2A5460AA002B8B77 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9161CADD2A5460AA002B8B77 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 3BE3FABB2BE38D9800CF61A1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		B138A3BA2A587751000EE81E /* RxCocoa */ = {
+		3BD441AB2BEB4CDA00DC0F3B /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B138A3B92A587751000EE81E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			package = 3BE3FABC2BE38DDE00CF61A1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
-		B1D0297D2A5D89DD000B5B53 /* SkeletonView */ = {
+		3BD441AD2BEB4CEE00DC0F3B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1D0297C2A5D89DD000B5B53 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			package = 3BE3FABE2BE38E1500CF61A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3BD441AF2BEB4CFA00DC0F3B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FAC02BE38E8500CF61A1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		3BD441B12BEB4D0000DC0F3B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B7CC3BE2BE38F9800CFC2C7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3BD441B32BEB4D0900DC0F3B /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FAC22BE38EA400CF61A1 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		3BD441B52BEB4D7600DC0F3B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FABD2BE38DF000CF61A1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		3BD441B72BEB4DB200DC0F3B /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FABF2BE38E5000CF61A1 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+		3BD441B92BEB4DF100DC0F3B /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FABE2BE38E1500CF61A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		3BD441BB2BEB4E1300DC0F3B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE3FABD2BE38DF000CF61A1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
