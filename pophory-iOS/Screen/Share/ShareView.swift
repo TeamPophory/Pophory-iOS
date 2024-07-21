@@ -23,10 +23,10 @@ class ShareView: UIView {
     }()
     
     let shareButton: PophoryButton = {
-    let buttonBuilder = PophoryButtonBuilder()
-    .setStyle(.primaryBlack)
-    .setTitle(.share)
-    return buttonBuilder.build()
+        let buttonBuilder = PophoryButtonBuilder()
+            .setStyle(.primaryBlack)
+            .setTitle(.share)
+        return buttonBuilder.build()
     }()
     
     private let profileStackView: UIStackView = {
@@ -67,7 +67,7 @@ class ShareView: UIView {
     let shareImageView = UIImageView()
     
     private let logoImageView = UIImageView(image: ImageLiterals.shareLogoIcon)
-
+    
     // MARK: - Life Cycle
     
     override init(frame: CGRect) {
@@ -92,7 +92,7 @@ extension ShareView {
     
     private func setupLayout() {
         self.addSubviews([shareButton, contentView])
-                        
+        
         contentView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -112,13 +112,13 @@ extension ShareView {
         }
         
         sharePhotoView.addSubviews([profileStackView ,shareImageView, logoImageView])
-
+        
         profileStackView.snp.makeConstraints {
             $0.height.equalTo(50)
             $0.top.equalToSuperview().inset(22)
             $0.leading.equalToSuperview().inset(20)
         }
-                
+        
         shareImageView.snp.makeConstraints {
             $0.height.equalTo(440)
             $0.top.equalTo(profileStackView.snp.bottom).offset(16)

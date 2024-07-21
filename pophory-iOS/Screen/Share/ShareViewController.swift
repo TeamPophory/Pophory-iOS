@@ -54,6 +54,7 @@ class ShareViewController: BaseViewController {
         super.viewDidLoad()
         
         hideNavigationBar()
+        setUpButton()
     }
 }
 
@@ -74,5 +75,14 @@ extension ShareViewController {
             default : return
             }
         }
+    }
+    
+    @objc
+    private func setUpRootView() {
+        RootViewSwitcher.shared.setupInitialView(PophoryTokenManager.shared.fetchLoggedInState())
+    }
+    
+    func setUpButton() {
+        rootView.shareButton.addTarget(self, action: #selector(setUpRootView), for: .touchUpInside)
     }
 }
