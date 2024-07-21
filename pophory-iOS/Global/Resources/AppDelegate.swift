@@ -74,19 +74,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        if #available(iOS 14, *) {
-            if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
-                    // Initialize the Google Mobile Ads SDK.
-                    #if RELEASE
-                    GADMobileAds.sharedInstance().start(completionHandler: nil)
-                    #else
-                    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
-                    [ "89ad6e2f5e35327a7987a9a5dc2a1149" ]      // testID
-                    #endif
-                })
-            }
-        }
+//        if #available(iOS 14, *) {
+//            if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
+//                ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
+//                    // Initialize the Google Mobile Ads SDK.
+//                    #if RELEASE
+//                    GADMobileAds.sharedInstance().start(completionHandler: nil)
+//                    #else
+//                    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+//                    [ "89ad6e2f5e35327a7987a9a5dc2a1149" ]      // testID
+//                    #endif
+//                })
+//            }
+//        }
     }
 }
 

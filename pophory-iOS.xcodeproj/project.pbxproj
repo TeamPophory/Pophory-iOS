@@ -177,7 +177,6 @@
 		B138A3C02A587A76000EE81E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B138A3BF2A587A76000EE81E /* SettingTableViewCell.swift */; };
 		B1631F0B2A1759EA0050974F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F0A2A1759EA0050974F /* AppDelegate.swift */; };
 		B1631F0D2A1759EA0050974F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F0C2A1759EA0050974F /* SceneDelegate.swift */; };
-		B1631F0F2A1759EA0050974F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F0E2A1759EA0050974F /* ViewController.swift */; };
 		B1631F142A1759EB0050974F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1631F132A1759EB0050974F /* Assets.xcassets */; };
 		B1631F172A1759EB0050974F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1631F152A1759EB0050974F /* LaunchScreen.storyboard */; };
 		B1631F222A1759EB0050974F /* pophory-iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631F212A1759EB0050974F /* pophory-iOSTests.swift */; };
@@ -404,7 +403,6 @@
 		B1631F072A1759EA0050974F /* pophory-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pophory-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1631F0A2A1759EA0050974F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1631F0C2A1759EA0050974F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1631F0E2A1759EA0050974F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1631F132A1759EB0050974F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1631F162A1759EB0050974F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1631F182A1759EB0050974F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1212,7 +1210,6 @@
 				B1631F0A2A1759EA0050974F /* AppDelegate.swift */,
 				B1631F0C2A1759EA0050974F /* SceneDelegate.swift */,
 				B1631F132A1759EB0050974F /* Assets.xcassets */,
-				B1631F0E2A1759EA0050974F /* ViewController.swift */,
 				B1631F152A1759EB0050974F /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -1584,7 +1581,6 @@
 				91F3A7602A517E9E00C06D1B /* ImageLiterals.swift in Sources */,
 				37DEF3902A822561000068A1 /* NextButtonDelegate.swift in Sources */,
 				6BCE475A2A684D540060EC78 /* FetchSharePhotoRequestDTO.swift in Sources */,
-				B1631F0F2A1759EA0050974F /* ViewController.swift in Sources */,
 				91F3A78C2A52B21000C06D1B /* StudiosAPI.swift in Sources */,
 				6BB37C652A5589F400E49B12 /* CustomModalPresentationController.swift in Sources */,
 				91F3A7A22A52D40A00C06D1B /* AlbumRepository.swift in Sources */,
