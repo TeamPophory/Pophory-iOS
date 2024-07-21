@@ -46,18 +46,7 @@ extension SettingsViewController {
     }
     
     private func presentRootVC() {
-        let appleLoginManager = AppleLoginManager()
-        let rootVC = OnboardingViewController(appleLoginManager: appleLoginManager)
-        let navVC = PophoryNavigationController(rootViewController: rootVC)
-        
-        appleLoginManager.delegate = rootVC
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let sceneDelegate = windowScene.delegate as? SceneDelegate,
-           let window = sceneDelegate.window {
-            window.rootViewController = navVC
-            window.makeKeyAndVisible()
-        }
+        RootViewSwitcher.shared.setupInitialView(PophoryTokenManager.shared.fetchLoggedInState())
     }
 }
 
