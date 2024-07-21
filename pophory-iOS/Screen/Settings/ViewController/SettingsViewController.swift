@@ -35,11 +35,7 @@ class SettingsViewController: BaseViewController {
 
 extension SettingsViewController {
     private func resetApp() {
-        guard let bundleIdentifier = Bundle.main.bundleIdentifier else {
-            return
-        }
-        
-        UserDefaults.standard.removePersistentDomain(forName: bundleIdentifier)
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.identifier)
         UserDefaults.standard.synchronize()
         
         presentRootVC()

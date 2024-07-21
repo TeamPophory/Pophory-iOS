@@ -15,8 +15,7 @@ protocol BaseTargetType: TargetType {
 
 extension BaseTargetType {
     var baseURL: URL {
-        guard let urlString = Bundle.main.infoDictionary?["BASE_URL"] as? String,
-              let url = URL(string: urlString) else {
+        guard let url = URL(string: Bundle.main.baseURL) else {
             fatalError("🚨Base URL을 찾을 수 없습니다🚨")
         }
         return url

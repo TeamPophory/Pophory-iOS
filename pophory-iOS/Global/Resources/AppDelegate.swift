@@ -22,13 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // MARK: - Sentry SDK 관련
-        SentrySDK.start { options in
-            if let dsn = Bundle.main.infoDictionary?["SENTRY_DSN"] as? String {
-                options.dsn = dsn
-            }
-            options.debug = true
-            options.tracesSampleRate = 1.0
-        }
+        
         requestTrackingAuthorization()
         
         return true
@@ -90,3 +84,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate {
+    private func setSentry() {
+        SentrySDK.start { options in
+            options.dsn = Bundle.main.sentryDNS
+            options.debug = true
+            options.tracesSampleRate = 1.0
+        }
+    }
+}

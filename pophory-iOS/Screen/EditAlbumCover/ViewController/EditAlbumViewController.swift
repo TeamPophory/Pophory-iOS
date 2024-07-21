@@ -155,14 +155,11 @@ extension EditAlbumViewController: Navigatable {
 extension EditAlbumViewController {
     private func loadAd() {
         let request = GADRequest()
-        guard let UnitAdID = Bundle.main.infoDictionary?["UNIT_AD_ID"] as? String else {
-            fatalError("🚨UNIT AD ID을 찾을 수 없습니다🚨")
-        }
+        let unitAdID = Bundle.main.unitAdID
         
-        print("🍥🍥🍥\(UnitAdID)")
         if Bundle.main.infoDictionary?["GADApplicationIdentifier"] is String {
-            GADRewardedInterstitialAd.load(withAdUnitID: UnitAdID,
-                                           request: request) { [self] ad, error in
+            GADRewardedInterstitialAd.load(withAdUnitID: unitAdID,
+                                           request: request) { ad, error in
                 if let error = error {
                     print("Failed to load interstitial ad with error: \(error.localizedDescription)")
                     return
@@ -189,7 +186,9 @@ extension EditAlbumViewController {
 //                self.presentAdAndPatchAlbumCover()
 //            }
 //        }
-        self.presentAdAndPatchAlbumCover()
+        dismiss(animated: true) {
+            self.presentAdAndPatchAlbumCover()
+        }
     }
     
     private func dismissPopUp() {

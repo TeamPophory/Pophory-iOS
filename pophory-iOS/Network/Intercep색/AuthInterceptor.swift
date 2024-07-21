@@ -15,11 +15,7 @@ final class AuthInterceptor: RequestInterceptor {
     private init() {}
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        guard let urlString = Bundle.main.infoDictionary?["BASE_URL"] as? String,
-              let url = URL(string: urlString) else {
-            fatalError("🚨Base URL을 찾을 수 없습니다🚨")
-        }
-        guard urlRequest.url?.absoluteString.hasPrefix(urlString) == true,
+        guard urlRequest.url?.absoluteString.hasPrefix(Bundle.main.baseURL) == true,
               let accessToken = PophoryTokenManager.shared.fetchAccessToken(),
               let refreshToken = PophoryTokenManager.shared.fetchRefreshToken() else {
             completion(.success(urlRequest))
