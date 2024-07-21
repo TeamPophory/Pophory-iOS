@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func setSentry() {
         SentrySDK.start { options in
-            options.dsn = Bundle.main.sentryDNS
+            options.dsn = Bundle.sentryDNS
             options.debug = true
             options.tracesSampleRate = 1.0
         }

@@ -15,7 +15,7 @@ final class AuthInterceptor: RequestInterceptor {
     private init() {}
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        guard urlRequest.url?.absoluteString.hasPrefix(Bundle.main.baseURL) == true,
+        guard urlRequest.url?.absoluteString.hasPrefix(Bundle.baseURL) == true,
               let accessToken = PophoryTokenManager.shared.fetchAccessToken(),
               let refreshToken = PophoryTokenManager.shared.fetchRefreshToken() else {
             completion(.success(urlRequest))

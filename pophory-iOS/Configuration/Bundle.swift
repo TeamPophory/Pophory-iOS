@@ -8,23 +8,9 @@
 import Foundation
 
 enum Config: String {
-    case baseURL
-    case sentryDNS
-    case unitADId
-    case GADApplicationIdentifier
-    
-    var rawValue: String {
-        switch self {
-        case .baseURL:
-            return "BASE_URL"
-        case .sentryDNS:
-            return "SENTRY_DNS"
-        case .unitADId:
-            return "UNIT_AD_ID"
-        case .GADApplicationIdentifier:
-            return "GADApplicationIdentifier"
-        }
-    }
+    case baseURL = "BASE_URL"
+    case sentryDNS = "SENTRY_DNS"
+    case unitADId = "UNIT_AD_ID"
 }
 
 extension Bundle {
@@ -61,9 +47,5 @@ extension Bundle {
     
     static var unitAdID: String {
         return getString(forKey: Config.unitADId.rawValue)
-    }
-    
-    static var GADApplicationIdentifier: String {
-        return getString(forKey: Config.GADApplicationIdentifier.rawValue)
     }
 }

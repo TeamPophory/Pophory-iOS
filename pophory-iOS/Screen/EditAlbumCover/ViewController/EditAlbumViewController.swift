@@ -155,7 +155,7 @@ extension EditAlbumViewController: Navigatable {
 extension EditAlbumViewController {
     private func loadAd() {
         let request = GADRequest()
-        let unitAdID = Bundle.main.unitAdID
+        let unitAdID = Bundle.unitAdID
         
         if Bundle.main.infoDictionary?["GADApplicationIdentifier"] is String {
             GADRewardedInterstitialAd.load(withAdUnitID: unitAdID,

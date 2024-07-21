@@ -67,7 +67,7 @@ extension PhotoDetailViewController {
         dynamicLinkComponents?.iOSParameters?.appStoreID = "6451004060"
         dynamicLinkComponents?.androidParameters = DynamicLinkAndroidParameters(packageName: "com.teampophory.pophory")
         
-        var dynamicURL = dynamicLinkComponents?.url
+        let dynamicURL = dynamicLinkComponents?.url
         
         dynamicLinkComponents?.shorten { (shortURL, warnings, error) in
             if let error = error {
