@@ -7,20 +7,39 @@
 
 import Foundation
 
-extension Bundle {
-    static var plist: NSDictionary? {
-        guard let filePath = Bundle.main.url(forResource: "Info", withExtension: "plist") else {
-            fatalError("Could't find file 'Info.plist'.")
+enum Config: String {
+    case baseURL
+    case sentryDNS
+    case unitADId
+    case GADApplicationIdentifier
+    
+    var rawValue: String {
+        switch self {
+        case .baseURL:
+            return "BASE_URL"
+        case .sentryDNS:
+            return "SENTRY_DNS"
+        case .unitADId:
+            return "UNIT_AD_ID"
+        case .GADApplicationIdentifier:
+            return "GADApplicationIdentifier"
         }
-        guard let plist = NSDictionary(contentsOf: filePath) else {
-            return nil
+    }
+}
+
+extension Bundle {
+    static var plist: [String: Any]? {
+        guard let url = Bundle.main.url(forResource: "Info", withExtension: "plist"),
+              let data = try? Data(contentsOf: url),
+              let plist = try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any] else {
+            fatalError("Could't load 'Info.plist'.")
         }
         return plist
     }
     
-    private static func getString(_ forKey: String) -> String {
-        guard let value = Bundle.plist?.object(forKey: forKey) as? String else {
-            fatalError("Could't find key \(forKey) in 'Info.plist'.")
+    private static func getString(forKey key: String) -> String {
+        guard let value = plist?[key] as? String else {
+            fatalError("Could't find key \(key) in 'Info.plist'.")
         }
         return value
     }
@@ -33,18 +52,18 @@ extension Bundle {
     }
     
     static var baseURL: String {
-        return getString("BASE_URL")
+        return getString(forKey: Config.baseURL.rawValue)
     }
     
     static var sentryDNS: String {
-        return getString("SENTRY_DNS")
+        return getString(forKey: Config.sentryDNS.rawValue)
     }
     
     static var unitAdID: String {
-        return getString("UNIT_AD_ID")
+        return getString(forKey: Config.unitADId.rawValue)
     }
     
     static var GADApplicationIdentifier: String {
-        return getString("GADApplicationIdentifier")
+        return getString(forKey: Config.GADApplicationIdentifier.rawValue)
     }
 }
