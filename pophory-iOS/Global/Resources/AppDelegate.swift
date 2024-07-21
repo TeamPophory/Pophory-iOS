@@ -18,11 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // MARK: - FireBase SDK 초기화
         FirebaseApp.configure()
-        
-        // MARK: - Sentry SDK 관련
-        
+        setSentry()
         requestTrackingAuthorization()
         
         return true
@@ -48,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
     }
+}
+
+extension AppDelegate {
     
     private func requestTrackingAuthorization() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -82,9 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
     }
-}
-
-extension AppDelegate {
+    
+    
     private func setSentry() {
         SentrySDK.start { options in
             options.dsn = Bundle.sentryDNS

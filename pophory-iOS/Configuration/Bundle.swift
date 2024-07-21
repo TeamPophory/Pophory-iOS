@@ -9,7 +9,7 @@ import Foundation
 
 enum Config: String {
     case baseURL = "BASE_URL"
-    case sentryDNS = "SENTRY_DNS"
+    case sentryDNS = "SENTRY_DSN"
     case unitADId = "UNIT_AD_ID"
 }
 
