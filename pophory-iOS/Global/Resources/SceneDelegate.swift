@@ -22,75 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         startMonitoringNetwork(on: scene)
-        
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
-            
-            let appleLoginManager = AppleLoginManager()
-            let rootVC = OnboardingViewController(appleLoginManager: appleLoginManager)
-            
-            appleLoginManager.delegate = rootVC
-            
-            let navigationController = PophoryNavigationController(rootViewController: rootVC)
-            
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-            self.window = window
-        }
+        setupWindow(for: scene)
     }
     
-    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        if let url = userActivity.webpageURL {
-            let handled = DynamicLinks.dynamicLinks().handleUniversalLink(url) { dynamicLink, error in
-                if let shareID = self.handleDynamicLink(dynamicLink) {
-                    guard let _ = (scene as? UIWindowScene) else { return }
-                    
-                    if let windowScene = scene as? UIWindowScene {
-                        let window = UIWindow(windowScene: windowScene)
-                        window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
-                        let rootVC = ShareViewController()
-                        rootVC.setupShareID(forShareID: shareID)
-                        rootVC.rootView.shareButton.addTarget(self, action: #selector(self.setupRoot), for: .touchUpInside)
-                        
-                        window.rootViewController = rootVC
-                        window.makeKeyAndVisible()
-                        self.window = window
-                    }
-                }
-            }
-        }
-    }
-    
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else { return }
-        
-        // shareExtension 받았을 때
-        if let range = url.absoluteString.range(of: "//") {
-            let substring = url.absoluteString[range.upperBound...]
-            
-            if substring == "share" {
-                
-                self.isAlbumFull { isAlbumFull in
-                    
-                    let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-                    
-                    if isLoggedIn {
-                        if isAlbumFull {
-                            self.setupAlbumFullViewController()
-                        } else {
-                            self.setupAddphotoViewcontroller()
-                        }
-                    } else {
-                        self.setupRootViewController()
-                    }
-                }
-            }
-        }
-    }
-    
-    func sceneDidDisconnect(_ scene: UIScene) {
-    }
+    func sceneDidDisconnect(_ scene: UIScene) { }
     
     func sceneDidBecomeActive(_ scene: UIScene) { }
     
@@ -100,46 +35,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) { }
     
-    @objc func setupRoot() {
-        setupRootViewController()
-    }
-    
-    func setupRootViewController() {
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        
-        var rootViewController: UIViewController
-        
-        if isLoggedIn {
-            let tabBarViewController = TabBarController()
-            rootViewController = tabBarViewController
-        } else {
-            let appleLoginManager = AppleLoginManager()
-            let rootVC = OnboardingViewController(appleLoginManager: appleLoginManager)
-            
-            appleLoginManager.delegate = rootVC
-            rootViewController = rootVC
-        }
-        let navigationController = PophoryNavigationController(rootViewController: rootViewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-    }
-    
-    private func handleDynamicLink(_ dynamicLink: DynamicLink?) -> String? {
-        guard let dynamicLink = dynamicLink, let link = dynamicLink.url else { return nil }
-        
-        if let components = URLComponents(url: link, resolvingAgainstBaseURL: false),
-           let queryItems = components.queryItems {
-            for item in queryItems {
-                if item.name == "u", let value = item.value {
-                    return value
-                }
-            }
-        }
-        return nil
-    }
-    
     private func isAlbumFull(completion: @escaping (Bool) -> ()) {
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+        let isLoggedIn = PophoryTokenManager.shared.fetchLoggedInState()
         
         if isLoggedIn {
             var maxPhotoCount: Int?
@@ -170,21 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
-    private func setupAlbumFullViewController() {
-        let tabBarController = TabBarController()
-        self.window?.rootViewController = PophoryNavigationController(rootViewController: tabBarController)
-        self.window?.rootViewController?.showPopup(popupType: .simple,
-                                                   image: ImageLiterals.img_albumfull,
-                                                   primaryText: "포포리 앨범이 가득찼어요",
-                                                   secondaryText: "아쉽지만,\n다음 업데이트에서 만나요!")
-        self.window?.makeKeyAndVisible()
-        
-    }
-    
     private func setupAddphotoViewcontroller() {
-        let tabBarController = TabBarController()
-        let addPhotoViewController = AddPhotoViewController()
-        
         var imageType: PhotoCellType = .vertical
         guard let image = UIPasteboard.general.image else { return }
         if image.size.width > image.size.height {
@@ -193,19 +76,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             imageType = .vertical
         }
         
-        addPhotoViewController.setupRootViewImage(forImage: image , forType: imageType)
-        
-        let navigationController = PophoryNavigationController(rootViewController: tabBarController)
-        navigationController.pushViewController(addPhotoViewController, animated: false)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        RootViewSwitcher.shared.setRootView(.addPhoto(image: image, imageType: imageType))
     }
 }
 
 // MARK: network
 
-private extension SceneDelegate {
-    func startMonitoringNetwork(on scene: UIScene) {
+extension SceneDelegate {
+    private func startMonitoringNetwork(on scene: UIScene) {
         networkMonitor.startMonitoring(statusUpdateHandler: { [weak self] connectionStatus in
             switch connectionStatus {
             case .satisfied: self?.removeNetworkErrorWindow()
@@ -215,7 +93,7 @@ private extension SceneDelegate {
         })
     }
     
-    func removeNetworkErrorWindow() {
+    private func removeNetworkErrorWindow() {
         DispatchQueue.main.async { [weak self] in
             self?.errorWindow?.resignKey()
             self?.errorWindow?.isHidden = true
@@ -223,7 +101,7 @@ private extension SceneDelegate {
         }
     }
     
-    func loadNetworkErrorWindow(on scene: UIScene) {
+    private func loadNetworkErrorWindow(on scene: UIScene) {
         if let windowScene = scene as? UIWindowScene {
             DispatchQueue.main.async { [weak self] in
                 let window = UIWindow(windowScene: windowScene)
@@ -234,5 +112,74 @@ private extension SceneDelegate {
                 self?.errorWindow = window
             }
         }
+    }
+}
+
+// MARK: DynamicLink
+
+extension SceneDelegate {
+    private func handleDynamicLink(_ dynamicLink: DynamicLink?) -> String? {
+        guard let dynamicLink = dynamicLink, let link = dynamicLink.url else { return nil }
+        
+        if let components = URLComponents(url: link, resolvingAgainstBaseURL: false),
+           let queryItems = components.queryItems {
+            for item in queryItems {
+                if item.name == "u", let value = item.value {
+                    return value
+                }
+            }
+        }
+        return nil
+    }
+    
+    internal func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if let url = userActivity.webpageURL {
+            _ = DynamicLinks.dynamicLinks().handleUniversalLink(url) { dynamicLink, error in
+                if let shareID = self.handleDynamicLink(dynamicLink) {
+                    RootViewSwitcher.shared.setRootView(.share(shareId: shareID))
+                }
+            }
+        }
+    }
+    
+    /// 실제 호출되지 않음
+//    internal func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        guard let url = URLContexts.first?.url else { return }
+//        
+//        // shareExtension 받았을 때
+//        if let range = url.absoluteString.range(of: "//") {
+//            let substring = url.absoluteString[range.upperBound...]
+//            
+//            if substring == "share" {
+//                
+//                self.isAlbumFull { isAlbumFull in
+//                    
+//                    let isLoggedIn = PophoryTokenManager.shared.fetchLoggedInState()
+//                    
+//                    if isLoggedIn {
+//                        if isAlbumFull {
+//                            RootViewSwitcher.shared.setRootView(.albumFull)
+//                        } else {
+//                            self.setupAddphotoViewcontroller()
+//                        }
+//                    } else {
+//                        self.setupWindow(for: scene)
+//                    }
+//                }
+//            }
+//        }
+//    }
+}
+
+extension SceneDelegate {
+    private func setupWindow(for scene: UIScene) {
+        guard let windowScene = scene as? UIWindowScene else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        window.overrideUserInterfaceStyle = .light
+        RootViewSwitcher.shared.setWindow(window)
+        RootViewSwitcher.shared.setupInitialView(PophoryTokenManager.shared.fetchLoggedInState())
+        
+        self.window = window
     }
 }

@@ -143,7 +143,7 @@ extension PickAlbumCoverView {
     private func scrollAlbumCover(next: Bool) {
         guard let indexPath = lastSelectedItemIndex else { return }
         var item = indexPath.item
-        var totalCount = selectButtonCollectionView.numberOfItems(inSection: 0)
+        let totalCount = selectButtonCollectionView.numberOfItems(inSection: 0)
         
         if next ? (item + 1 < totalCount) : (item - 1 >= 0) {
             item = next ? (item + 1) : (item - 1)

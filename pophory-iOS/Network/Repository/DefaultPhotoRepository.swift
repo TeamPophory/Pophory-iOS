@@ -48,7 +48,7 @@ final class DefaultPhotoRepository: BaseRepository, PhotoRepository {
         provider.request(.postPhoto(body: body)) { result in
             switch result {
             case.success(let response):
-                let statusCode = response.statusCode
+                let _ = response.statusCode
                 completion(.success((Any).self))
             case .failure(let err):
                 print(err)
@@ -63,7 +63,7 @@ final class DefaultPhotoRepository: BaseRepository, PhotoRepository {
         provider.request(.deletePhoto(photoId: photoId)) { result in
             switch result {
             case.success(let response):
-                let statusCode = response.statusCode
+                let _ = response.statusCode
                 completion(.success((Any).self))
             case .failure(let err):
                 print(err)

@@ -52,7 +52,7 @@ final class DefaultAlbumRespository: BaseRepository, AlbumRepository {
         provider.request(.patchAlbumCover(albumId: albumId, body: body)) { result in
             switch result {
             case.success(let response):
-                let statusCode = response.statusCode
+                let _ = response.statusCode
                 completion(.success(()))
             case .failure(let err):
                 print(err)

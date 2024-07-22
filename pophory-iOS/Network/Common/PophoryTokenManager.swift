@@ -7,12 +7,13 @@
 
 import UIKit
 
-class PophoryTokenManager {
+final class PophoryTokenManager {
     static let shared = PophoryTokenManager()
     private init() {}
     
     private let userDefaultsAccessTokenKey = "accessToken"
     private let userDefaultsRefreshTokenKey = "refreshToken"
+    private let isLoggedIn = "isLoggedIn"
     
     func saveAccessToken(_ token: String) {
         UserDefaults.standard.set(token, forKey: userDefaultsAccessTokenKey)
@@ -28,5 +29,9 @@ class PophoryTokenManager {
     
     func fetchRefreshToken() -> String? {
         return UserDefaults.standard.string(forKey: userDefaultsRefreshTokenKey)
+    }
+    
+    func fetchLoggedInState() -> Bool {
+        return UserDefaults.standard.bool(forKey: isLoggedIn)
     }
 }

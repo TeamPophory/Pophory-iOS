@@ -32,7 +32,6 @@ final class OnboardingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-       checkLoginHistoryAndNavigate()
         PophoryNavigationConfigurator.shared.configureNavigationBar(in: self)
     }
    
@@ -69,45 +68,13 @@ extension OnboardingViewController {
         onboardingView.realAppleSignInButton.addTarget(self, action: #selector(handleAppleLoginButtonClicked), for: .touchUpInside)
     }
     
-   /// isLoggedIn 여부 확인
-    private func hasLoginHistory() -> Bool {
-        return UserDefaults.standard.bool(forKey: "isLoggedIn")
-    }
-    
     private func goToSignInViewController() {
         let nameInputVC = NameInputViewController()
         navigationController?.pushViewController(nameInputVC, animated: true)
     }
     
     private func navigateToTabBarController() {
-        let tabbarController = PophoryNavigationController(rootViewController: TabBarController())
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let sceneDelegate = windowScene.delegate as? SceneDelegate,
-           let window = sceneDelegate.window {
-            window.rootViewController = tabbarController
-            window.makeKeyAndVisible()
-        }
-    }
-    
-    private func checkLoginHistoryAndNavigate() {
-       DispatchQueue.main.async {
-          if self.hasLoginHistory() {
-             print("🍥🍥기록 있음")
-             NetworkService.shared.authRepostiory.updateRefreshToken { result in
-                switch result {
-                case .success:
-                   print("🍥🍥토큰 재발급 성공")
-                   self.navigateToTabBarController()
-                default:
-                   print("🍥🍥재발급 실패")
-                   
-                }
-             }
-          } else {
-             print("🍥🍥기록 없음")
-          }
-       }
+       RootViewSwitcher.shared.setRootView(.home)
     }
 }
 

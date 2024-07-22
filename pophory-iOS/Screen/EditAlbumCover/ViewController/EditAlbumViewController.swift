@@ -13,7 +13,7 @@ import AdSupport
 final class EditAlbumViewController: BaseViewController {
     
     private let editAlbumView = EditAlbumView()
-    private var rewardedInterstitialAd: GADRewardedInterstitialAd?
+    //private var rewardedInterstitialAd: GADRewardedInterstitialAd?
     var albumPK = Int()
     var albumCoverIndex = Int()
     var albumThemeCoverIndex = Int()
@@ -28,7 +28,7 @@ final class EditAlbumViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadAd()
+        //loadAd()
     }
     
     override func viewDidLayoutSubviews() {
@@ -155,39 +155,39 @@ extension EditAlbumViewController: Navigatable {
 extension EditAlbumViewController {
     private func loadAd() {
         let request = GADRequest()
-        guard let UnitAdID = Bundle.main.infoDictionary?["UNIT_AD_ID"] as? String else {
-            fatalError("🚨UNIT AD ID을 찾을 수 없습니다🚨")
-        }
+        let unitAdID = Bundle.unitAdID
         
-        print("🍥🍥🍥\(UnitAdID)")
         if Bundle.main.infoDictionary?["GADApplicationIdentifier"] is String {
-            GADRewardedInterstitialAd.load(withAdUnitID: UnitAdID,
-                                           request: request) { [self] ad, error in
+            GADRewardedInterstitialAd.load(withAdUnitID: unitAdID,
+                                           request: request) { ad, error in
                 if let error = error {
                     print("Failed to load interstitial ad with error: \(error.localizedDescription)")
                     return
                 }
-                rewardedInterstitialAd = ad
-                rewardedInterstitialAd?.fullScreenContentDelegate = self
+                //rewardedInterstitialAd = ad
+                //rewardedInterstitialAd?.fullScreenContentDelegate = self
             }
         }
     }
     
     private func pushToFullAd() {
-        guard let rewardedInterstitialAd = self.rewardedInterstitialAd else {
-            print("광고가 준비되지 않았습니다.")
-            
-            //TODO: - 광고 준비되지 않았을 때 홈으로 돌아가는 상태
-            dismiss(animated: true) {
-                self.presentAdAndPatchAlbumCover()
-            }
-            return
-        }
-        
+//        guard let rewardedInterstitialAd = self.rewardedInterstitialAd else {
+//            print("광고가 준비되지 않았습니다.")
+//            
+//            //TODO: - 광고 준비되지 않았을 때 홈으로 돌아가는 상태
+//            dismiss(animated: true) {
+//                self.presentAdAndPatchAlbumCover()
+//            }
+//            return
+//        }
+//        
+//        dismiss(animated: true) {
+//            rewardedInterstitialAd.present(fromRootViewController: self) {
+//                self.presentAdAndPatchAlbumCover()
+//            }
+//        }
         dismiss(animated: true) {
-            rewardedInterstitialAd.present(fromRootViewController: self) {
-                self.presentAdAndPatchAlbumCover()
-            }
+            self.presentAdAndPatchAlbumCover()
         }
     }
     

@@ -43,7 +43,7 @@ final class DefaultMemberRepository: BaseRepository, MemberRepository {
     
     func submitSignUp(body: patchSignUpRequestDTO) async throws {
         do {
-            let response = try await provider.request(.patchSignUp(body: body))
+            let _ = try await provider.request(.patchSignUp(body: body))
         } catch {
             throw error
         }

@@ -50,7 +50,7 @@ extension TabBarController {
     
     private func setupShareNetworkRequest() {
         ShareNetworkManager.shared.requestPostSharePhoto() { [weak self] response in
-            if (response?.code == 4423) {
+            if (response?.albumId == 4423) {
                 self?.showPopup(popupType: .simple,
                                 secondaryText: "이미 내 앨범에 있는 사진이에요",
                                 firstButtonTitle: .back)
