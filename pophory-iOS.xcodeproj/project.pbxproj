@@ -67,6 +67,8 @@
 		3B1E30F72C4EA85800E019D9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1E30F62C4EA85800E019D9 /* FirebaseCrashlytics */; };
 		3B1E30F92C4EA85800E019D9 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1E30F82C4EA85800E019D9 /* FirebaseDynamicLinks */; };
 		3B1E30FB2C4EA85800E019D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1E30FA2C4EA85800E019D9 /* FirebaseRemoteConfig */; };
+		3B1E31022C4FC57400E019D9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E31012C4FC57400E019D9 /* SplashViewController.swift */; };
+		3B1E31042C4FC5BB00E019D9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E31032C4FC5BB00E019D9 /* SplashView.swift */; };
 		3B218EA72B833FA0006959E3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B218EA62B833FA0006959E3 /* AuthInterceptor.swift */; };
 		3B3A09132A56A56F00C8A740 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A09122A56A56F00C8A740 /* PhotoDetailView.swift */; };
 		3B3A09152A56A6C700C8A740 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A09142A56A6C700C8A740 /* PhotoDetailViewController.swift */; };
@@ -307,6 +309,8 @@
 		3B149AB72C4D1EF500F1832B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		3B149AB92C4D4B2C00F1832B /* RootViewSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewSwitcher.swift; sourceTree = "<group>"; };
 		3B1E30F12C4EA60200E019D9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3B1E31012C4FC57400E019D9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3B1E31032C4FC5BB00E019D9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3B218EA62B833FA0006959E3 /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
 		3B3A09122A56A56F00C8A740 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		3B3A09142A56A6C700C8A740 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
@@ -736,6 +740,32 @@
 				3B149AB72C4D1EF500F1832B /* Bundle.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3B1E30FE2C4FC53000E019D9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E31002C4FC56600E019D9 /* ViewController */,
+				3B1E30FF2C4FC55F00E019D9 /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3B1E30FF2C4FC55F00E019D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E31032C4FC5BB00E019D9 /* SplashView.swift */,
+			);
+			name = View;
+			path = "퍋ㅈ";
+			sourceTree = "<group>";
+		};
+		3B1E31002C4FC56600E019D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E31012C4FC57400E019D9 /* SplashViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		3B218EA52B833F85006959E3 /* Interceptor */ = {
@@ -1171,6 +1201,7 @@
 		B1631F3B2A175B290050974F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				3B1E30FE2C4FC53000E019D9 /* Splash */,
 				37E036DE2AD298F9004E179A /* PhotoUpload */,
 				37E036D52ACFFD4A004E179A /* QRDownload */,
 				37E036D42ACFFD0D004E179A /* QRScanner */,
@@ -1588,6 +1619,7 @@
 				B138A3B82A586EC3000EE81E /* SettingsRootView.swift in Sources */,
 				377EF7E72A4F4C8700E3268D /* NameInputView.swift in Sources */,
 				B1631F542A175F090050974F /* UIImageView+Extension.swift in Sources */,
+				3B1E31022C4FC57400E019D9 /* SplashViewController.swift in Sources */,
 				377EF7EF2A4FC6E900E3268D /* PophoryNavigationConfigurator.swift in Sources */,
 				3B583A5F2AF0288F008FFB9A /* AdAPI.swift in Sources */,
 				B1631F502A175E840050974F /* String+Extension.swift in Sources */,
@@ -1725,6 +1757,7 @@
 				6BA49DEE2A66EF3000414CBF /* AddPhotoNetworkManager.swift in Sources */,
 				91F3A7662A52A87E00C06D1B /* FetchStudiosResponseDTO.swift in Sources */,
 				B1D029832A5DA7AF000B5B53 /* MyPageNetworkManager.swift in Sources */,
+				3B1E31042C4FC5BB00E019D9 /* SplashView.swift in Sources */,
 				91F3A7B02A52F97700C06D1B /* AlbumDetailViewController.swift in Sources */,
 				B1631F5D2A175F9C0050974F /* Date+Extension.swift in Sources */,
 				37310F142A5535B20046E777 /* PickAlbumButtonCollectionViewCell.swift in Sources */,
@@ -2031,7 +2064,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2078,7 +2111,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
