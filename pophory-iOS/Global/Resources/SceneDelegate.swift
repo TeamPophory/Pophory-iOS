@@ -178,7 +178,7 @@ extension SceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.overrideUserInterfaceStyle = .light
         RootViewSwitcher.shared.setWindow(window)
-        RootViewSwitcher.shared.setupInitialView(PophoryTokenManager.shared.fetchLoggedInState())
+		RootViewSwitcher.shared.setRootView(.splash)
         
         self.window = window
     }

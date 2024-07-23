@@ -11,6 +11,8 @@ enum Config: String {
     case baseURL = "BASE_URL"
     case sentryDNS = "SENTRY_DSN"
     case unitADId = "UNIT_AD_ID"
+	case appVersion = "CFBundleShortVersionString"
+	case appId = "APP_ID"
 }
 
 extension Bundle {
@@ -48,4 +50,12 @@ extension Bundle {
     static var unitAdID: String {
         return getString(forKey: Config.unitADId.rawValue)
     }
+	
+	static var appVersion: String {
+		return getString(forKey: Config.appVersion.rawValue)
+	}
+	
+	static var appId: String {
+		return getString(forKey: Config.appId.rawValue)
+	}
 }

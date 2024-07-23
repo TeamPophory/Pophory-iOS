@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>itms-apps</string>
+		<string>https</string>
+	</array>
+	<key>APP_ID</key>
+	<string>$(APP_ID)</string>
 	<key>UNIT_AD_ID</key>
 	<string>$(UNIT_AD_ID)</string>
 	<key>NSCameraUsageDescription</key>

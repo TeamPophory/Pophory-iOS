@@ -8,11 +8,17 @@
 import UIKit
 
 enum RootView {
+	case splash
     case onboarding
     case home
     case albumFull
     case addPhoto(image: UIImage, imageType: PhotoCellType)
     case share(shareId: String)
+}
+
+enum UpdateType {
+	case force
+	case optional
 }
 
 final class RootViewSwitcher {
@@ -33,11 +39,14 @@ final class RootViewSwitcher {
 }
 
 extension RootViewSwitcher {
+	
     func setRootView(_ rootView: RootView) {
         guard let window = self.window else { return }
         
         var rootViewController: UIViewController
         switch rootView {
+		case .splash:
+			rootViewController = SplashViewController()
         case .onboarding:
             let appleLoginManager = AppleLoginManager()
             let onboardingViewController = OnboardingViewController(appleLoginManager: appleLoginManager)
@@ -64,7 +73,7 @@ extension RootViewSwitcher {
             let navigationController = PophoryNavigationController(rootViewController: tabBarController)
             navigationController.pushViewController(addPhotoViewController, animated: false)
             return
-        }
+		}
         window.rootViewController = PophoryNavigationController(rootViewController: rootViewController)
         window.makeKeyAndVisible()
     }
