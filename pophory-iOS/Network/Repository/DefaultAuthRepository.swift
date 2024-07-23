@@ -11,7 +11,7 @@ import Moya
 
 final class DefaultAuthRepository: BaseRepository, AuthRepository {
     
-    let provider = MoyaProvider<AuthAPI>(plugins: [MoyaLoggerPlugin()])
+    let provider = MoyaProvider<AuthAPI>(session: Session(interceptor: AuthInterceptor.shared), plugins: [MoyaLoggerPlugin()])
     
     func submitAppleAuthorizationCode(code: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         provider.request(.postAuthorizationCode(authorizationCode: code)) { result in
