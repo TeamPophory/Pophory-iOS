@@ -14,6 +14,7 @@ enum WebViewURLList {
     case settingNotice
     case settingPrivacyPolicy
     case settingTerms
+	case appStore
     
     var url: String {
         switch self {
@@ -27,6 +28,8 @@ enum WebViewURLList {
             return "https://pophoryofficial.wixsite.com/pophory/%EC%A0%95%EC%B1%85#policy2"
         case .settingTerms:
             return "https://pophoryofficial.wixsite.com/pophory/%EC%A0%95%EC%B1%85#policy1"
-        }
+		case .appStore:
+			return "itms-apps://itunes.apple.com/app/\(Bundle.appId)"
+		}
     }
 }
