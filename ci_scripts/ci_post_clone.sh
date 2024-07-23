@@ -20,9 +20,10 @@ CONFIG_FILE_PATH="$FOLDER_PATH/$CONFIG_FILENAME"
 
 # 환경 변수에서 값을 가져와서 *.xconfig 파일에 추가하기
 echo "BASE_URL = $BASE_URL" >> "$CONFIG_FILE_PATH"
-echo "UNIT_AD_ID = $UNIT_AD_ID" >> "$CONFIG_FILE_PATH"
 echo "SENTRY_DSN = $SENTRY_DSN" >> "$CONFIG_FILE_PATH"
-echo "ADMOB_APP_ID = $ADMOB_APP_ID" >> "$CONFIG_FILE_PATH"
+echo "APP_ID = $APP_ID" >> "$APP_ID"
+# echo "ADMOB_APP_ID = $ADMOB_APP_ID" >> "$CONFIG_FILE_PATH"
+# echo "UNIT_AD_ID = $UNIT_AD_ID" >> "$CONFIG_FILE_PATH"
 
 # 생성된 *.xconfig 파일 내용 출력
 cat "$CONFIG_FILE_PATH"
