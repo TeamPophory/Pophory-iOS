@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
       "state" : {
-        "revision" : "97940381e57703c07f31a8058d8f39ec53b7c272",
-        "version" : "10.25.0"
+        "revision" : "eca84fd638116dd6adb633b5a3f31cc7befcbb7d",
+        "version" : "10.29.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "16244d177c4e989f87b25e9db1012b382cfedc55",
-        "version" : "10.25.0"
+        "revision" : "fe727587518729046fc1465625b9afd80b5ab361",
+        "version" : "10.28.0"
       }
     },
     {
@@ -147,7 +147,7 @@
     {
       "identity" : "rxswift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ReactiveX/RxSwift",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
       "state" : {
         "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
         "version" : "6.7.1"
@@ -165,7 +165,7 @@
     {
       "identity" : "skeletonview",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Juanpe/SkeletonView",
+      "location" : "https://github.com/Juanpe/SkeletonView.git",
       "state" : {
         "revision" : "2f5274827d310e32c09325dd3e0007120940988e",
         "version" : "1.31.0"
@@ -174,7 +174,7 @@
     {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SnapKit/SnapKit",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
       "state" : {
         "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
         "version" : "5.7.1"
@@ -185,8 +185,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
       "state" : {
-        "revision" : "70516c9e799a366ff90c1a70c09c48f7c076fd8a",
-        "version" : "10.14.0"
+        "revision" : "6457f9651bea0d62a548ac63fa9d34aae7d0488e",
+        "version" : "11.7.0"
       }
     },
     {
