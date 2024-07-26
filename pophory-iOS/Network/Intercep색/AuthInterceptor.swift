@@ -41,8 +41,7 @@ final class AuthInterceptor: RequestInterceptor {
                     return
                 }
             default:
-                // TODO: - 갱신 실패 로그인화면으로 전환
-                
+				RootViewSwitcher.shared.setRootView(.onboarding)
                 completion(.doNotRetryWithError(error))
             }
         }
