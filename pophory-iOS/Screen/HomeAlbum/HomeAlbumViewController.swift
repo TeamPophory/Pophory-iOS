@@ -94,7 +94,7 @@ extension HomeAlbumViewController {
             homeAlbumView.albumImageView.image = ImageLiterals.albumCoverList[coverIndex]
         }
         
-        homeAlbumView.statusLabelText = String(album.photoCount ?? 0)
+		homeAlbumView.setPhotoCount(String(album.photoCount ?? 0))
         
         homeAlbumView.updateProgressBarWidth(updateWidth: progressValueUnwrapped)
         

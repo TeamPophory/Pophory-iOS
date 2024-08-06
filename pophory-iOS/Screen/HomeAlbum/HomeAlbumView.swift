@@ -238,4 +238,8 @@ extension HomeAlbumView {
     func setMaxPhotoCount(_ maxPhotoCount: Int) {
         self.maxPhotoLimit = maxPhotoCount
     }
+	
+	func setPhotoCount(_ photoCount: String) {
+		self.statusLabelText = photoCount
+	}
 }
