@@ -177,9 +177,9 @@ extension SceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         window.overrideUserInterfaceStyle = .light
-        RootViewSwitcher.shared.setWindow(window)
+		self.window = window
+		window.makeKeyAndVisible()
+		
 		RootViewSwitcher.shared.setRootView(.splash)
-        
-        self.window = window
     }
 }

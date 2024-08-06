@@ -63,9 +63,7 @@ final class DefaultAuthRepository: BaseRepository, AuthRepository {
                 if response.statusCode < 300 {
                     do {
                         let loginResponse = try response.map(UpdatedAccessTokenDTO.self)
-                        completion(.success((loginResponse)))
-                        PophoryTokenManager.shared.saveAccessToken(loginResponse.accessToken)
-                        PophoryTokenManager.shared.saveRefreshToken(loginResponse.refreshToken)
+						completion(.success((loginResponse)))
                         print("Successfully refreshed access token")
                     } catch {
                         print("Error decoding the login response: \(error)")

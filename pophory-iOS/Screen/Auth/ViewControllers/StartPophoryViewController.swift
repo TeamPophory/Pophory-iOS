@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartPophoryViewController: BaseViewController {
+final class StartPophoryViewController: BaseViewController {
     
     lazy var startPophoryView = StartPophoryView()
     
