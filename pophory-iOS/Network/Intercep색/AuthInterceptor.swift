@@ -41,6 +41,7 @@ final class AuthInterceptor: RequestInterceptor {
                 guard let response = response as? UpdatedAccessTokenDTO else {
 					RootViewSwitcher.shared.setRootView(.onboarding)
 					completion(.doNotRetryWithError(error))
+					
 					return
                 }
 				completion(.retry)
