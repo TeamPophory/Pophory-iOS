@@ -17,7 +17,7 @@ protocol MyPageRootViewDelegate: NSObject {
     func handleOnAd()
 }
 
-class MyPageRootView: UIView {
+final class MyPageRootView: UIView {
     
     // MARK: - Properties
     
