@@ -7,21 +7,20 @@
 
 import UIKit
 
-enum RootView {
-	case splash
-    case onboarding
-    case home
-    case albumFull
-    case addPhoto(image: UIImage, imageType: PhotoCellType)
-    case share(shareId: String)
-}
-
 enum UpdateType {
 	case force
 	case optional
 }
 
 final class RootViewSwitcher {
+	enum RootView {
+		case splash
+		case onboarding
+		case home
+		case albumFull
+		case addPhoto(image: UIImage, imageType: PhotoCellType)
+		case share(shareId: String)
+	}
     
     static let shared = RootViewSwitcher()
     
@@ -41,8 +40,9 @@ final class RootViewSwitcher {
 extension RootViewSwitcher {
 	
     func setRootView(_ rootView: RootView) {
-        guard let window = self.window else { return }
-        
+		let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+		guard let delegate = sceneDelegate else { return }
+		
         var rootViewController: UIViewController
         switch rootView {
 		case .splash:
@@ -74,7 +74,6 @@ extension RootViewSwitcher {
             navigationController.pushViewController(addPhotoViewController, animated: false)
             return
 		}
-        window.rootViewController = PophoryNavigationController(rootViewController: rootViewController)
-        window.makeKeyAndVisible()
+		delegate.window?.rootViewController = PophoryNavigationController(rootViewController: rootViewController)
     }
 }
