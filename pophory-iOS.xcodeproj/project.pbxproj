@@ -759,15 +759,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3B218EA52B833F85006959E3 /* Interceptor */ = {
-			isa = PBXGroup;
-			children = (
-				3B218EA62B833FA0006959E3 /* AuthInterceptor.swift */,
-			);
-			name = Interceptor;
-			path = "Intercep색";
-			sourceTree = "<group>";
-		};
 		3B3A090F2A56A4F200C8A740 /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +805,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3BC15D842C6255BC0056A87F /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				3B218EA62B833FA0006959E3 /* AuthInterceptor.swift */,
+			);
+			path = Interceptor;
 			sourceTree = "<group>";
 		};
 		3BE178932C4FF1A600FC755B /* View */ = {
@@ -1006,7 +1005,7 @@
 		91F3A77C2A52AD8300C06D1B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				3B218EA52B833F85006959E3 /* Interceptor */,
+				3BC15D842C6255BC0056A87F /* Interceptor */,
 				91F3A77D2A52ADCA00C06D1B /* Common */,
 				B1631F5E2A175FD00050974F /* Models */,
 				91F3A78A2A52B1B300C06D1B /* API */,
@@ -2041,7 +2040,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.3.0;
+				CURRENT_PROJECT_VERSION = 1.4.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CQJ9UKUU35;
@@ -2063,7 +2062,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2088,7 +2087,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.3.0;
+				CURRENT_PROJECT_VERSION = 1.4.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CQJ9UKUU35;
@@ -2110,7 +2109,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Team.pophory-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

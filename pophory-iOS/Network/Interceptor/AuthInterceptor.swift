@@ -28,7 +28,8 @@ final class AuthInterceptor: RequestInterceptor {
 		}
 		
 		var urlRequest = urlRequest
-		urlRequest.headers.update(name: "Authorization", value: "Bearer \(PophoryTokenManager.shared.fetchAccessToken()!)")
+		urlRequest.setValue("Bearer \(PophoryTokenManager.shared.fetchAccessToken()!)", forHTTPHeaderField: "Authorization")
+//		urlRequest.headers.update(name: "Authorization", value: "Bearer \(PophoryTokenManager.shared.fetchAccessToken()!)")
 		print("🍥🍥🍥adator 적용 \(urlRequest.headers)")
 		completion(.success(urlRequest))
 	}
